@@ -3,7 +3,7 @@ This is for training regex expressions
 
 
 Minimum eight characters, at least one letter and one number:
-"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+`"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"`
 
 
 Minimum eight characters, at least one letter, one number and one special character:
