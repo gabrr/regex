@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Forms and Fetching Content</title>
+</head>
+
+<body>
+    <ul>
+        <input oninput="treating(this)" class="inputid1" data-id="1" type="text" name="name" id="name">
+        <div class="message messageid1" data-id="1"></div>
+
+
+
+    </ul>
+</body>
+<script>
+    const treating = x => {
+        let id = x.dataset.id
+        if (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(x.value)) {
+            document.querySelector(`.messageid${id}`).innerHTML = "So much better :)"
+        } else {
+            document.querySelector(`.messageid${id}`).innerHTML = "8 charc minumum, letters and numbers"
+        }
+        // else {
+        //     document.querySelector(`.messageid${id}`).innerHTML = "This is not doing well"
+        // }
+    }
+
+    //the difference between PUT and POST is: 
+    //PUT will update a document if it alredy exists since when making a call it is required to set the id.
+    //POST will add a document even though is the same.
+</script>
+
+</html>
+
+
+
+<!-- // // console.log()
+    // document.getElementById("form").childNodes.forEach(element => {
+    //     element.addEventListener("input", (x) => {
+    //         if (/^[a-z]/.test(x.data)) {
+    //             element.nextElementSibling.innerHTML = "Muito bom"
+    //         } else {
+    //             element.nextElementSibling.innerHTML = "Sem numeros"
+    //         }
+    //     })
+    // }); -->
+<!-- <form id="form">
+        <input ad="no" class="input" type="text" />
+        <div class="message"></div>
+        <input class="input2" type="text" />
+        <input class="input3" type="text" />
+    </form> -->
+
+
+
+
+<!-- const posts = [{
+title: "the first one",
+body: "This is the post body"
+}, {
+title: "the first two",
+body: "This is the post body"
+}, {
+title: "the first four",
+body: "This is the post body"
+}, {
+title: "the first five",
+body: "This is the post body"
+}]
+
+
+posts.map((post, index) => {
+document.querySelector("ul").innerHTML += `<li>${post.title}</li><p>${post.body}</p>`
+}) -->
