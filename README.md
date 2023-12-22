@@ -2,6 +2,11 @@
 This is for training regex expressions
 
 
+Repeated characters
+```javascript
+/(.)\1+/g
+```
+
 Minimum eight characters, at least one letter and one number:
 ```javascript
 ^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$
